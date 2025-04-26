@@ -65,6 +65,8 @@
         public ResponseEntity<String> actualizarParametroCliente(@PathVariable long id, @RequestBody Cliente clienteUpdate){
             Cliente cliente = clienteRepository.findById(id).orElse(null);
 
+            //Coentario de prueba
+
             if(cliente != null){
                 if(clienteUpdate.getNombre() != null ){
                     cliente.setNombre(clienteUpdate.getNombre());
